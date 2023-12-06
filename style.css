@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    height: 100vh;
+    text-align: center;
+}
+
+#canvas {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 70vh;
+    margin: 0 auto;
+}
+
+#new {
+    padding: 16px;
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
+}
+
+.square {
+    flex: 1;
+    box-sizing: border-box;
+    border: solid black 1px;
+}
