@@ -2,18 +2,56 @@ body {
     margin: 0;
     height: 100vh;
     text-align: center;
+    background-color: lightcyan;
+}
+
+#overlay {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#dialogue {
+    height: 40vh;
+    width: 60vh;
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 #canvas {
     display: flex;
     flex-direction: column;
-    height: 70vh;
-    width: 70vh;
+    height: 80vh;
+    width: 80vh;
     margin: 0 auto;
+    background-color: white;
+    border: solid black 2px;
+}
+
+#close {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 8px;
+    margin-right: 8px;
+    align-self: end;
 }
 
 #new {
+    margin: 3vh 0;
     padding: 16px;
+    user-select: none;
 }
 
 .row {
@@ -23,6 +61,4 @@ body {
 
 .square {
     flex: 1;
-    box-sizing: border-box;
-    border: solid black 1px;
 }

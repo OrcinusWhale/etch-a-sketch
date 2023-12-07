@@ -8,7 +8,12 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <button id="new">New Grid</button>
+    <button type="button" id="new" onclick="openCanvasDialogue()">New Canvas</button>
     <div id="canvas"></div>
+    <div id="overlay">
+        <div id="dialogue">
+            <button type="button" id="close" onclick="closeCanvasDialogue()">X</button>
+        </div>
+    </div>
 </body>
 </html>
