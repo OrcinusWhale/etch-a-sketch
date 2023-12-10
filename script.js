@@ -17,8 +17,25 @@ function generateCanvas(height, width) {
     });
 }
 
+function newCanvas(event) {
+    event.preventDefault();
+    while(canvas.firstChild) {
+        canvas.removeChild(canvas.lastChild);
+    }
+    const newHeight = Number(heightInput.value);
+    const newWidth = Number(widthInput.value);
+    if (newHeight)
+        height = newHeight;
+    if (newWidth)
+        width = newWidth;
+    generateCanvas(height, width);
+    closeCanvasDialogue();
+}
+
 function openCanvasDialogue() {
     overlay.style.display = "flex";
+    widthInput.placeholder = width;
+    heightInput.placeholder = height;
 }
 
 function closeCanvasDialogue() {
@@ -27,6 +44,9 @@ function closeCanvasDialogue() {
 
 let height = 16;
 let width = 16;
+const widthInput = document.querySelector("#width");
+const heightInput = document.querySelector("#height");
+const dialogueSubmit = document.querySelector("#dialogueSubmit");
 window.addEventListener("dragstart", (event) => event.preventDefault());
 let pressed = false;
 document.addEventListener("mousedown", () => pressed = true);

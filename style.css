@@ -19,8 +19,6 @@ body {
 }
 
 #dialogue {
-    height: 40vh;
-    width: 60vh;
     background-color: white;
     border: solid black 1px;
     border-radius: 10px;
@@ -61,4 +59,16 @@ body {
 
 .square {
     flex: 1;
+}
+
+.inputContainer {
+    display: flex;
+    padding: 16px;
+    gap: 8px;
+}
+
+#dialogueSubmit {
+    align-self: center;
+    padding: 16px;
+    margin: 8px;
 }
